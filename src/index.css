@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=ZCOOL+XiaoWei&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #f45d2f;
+  --color-primary-hover: #e04a20;
+  --color-background-light: #FFF9F4;
+  --color-background-dark: #2D1C16;
+  --color-surface: #FFFFFF;
+  --color-text-main: #2D1C16;
+  --color-text-muted: #8D6E63;
+  --color-accent: #F4A261;
+
+  --font-sans: "Noto Sans SC", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "ZCOOL XiaoWei", serif;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  --shadow-warm: 0 8px 24px rgba(244, 93, 47, 0.08);
+  --shadow-warm-hover: 0 12px 32px rgba(244, 93, 47, 0.12);
+}
+
+@layer base {
+  body {
+    @apply bg-background-light text-text-main font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .masonry-grid {
+    column-count: 2;
+    column-gap: 0.75rem;
+  }
+  @media (min-width: 640px) {
+    .masonry-grid {
+      column-count: 3;
+      column-gap: 1rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .masonry-grid {
+      column-count: 4;
+    }
+  }
+  @media (min-width: 1280px) {
+    .masonry-grid {
+      column-count: 5;
+    }
+  }
+  .masonry-item {
+    break-inside: avoid;
+    margin-bottom: 0.75rem;
+  }
+  @media (min-width: 640px) {
+    .masonry-item {
+      margin-bottom: 1rem;
+    }
+  }
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #d1d5db;
+    border-radius: 10px;
+  }
+}
