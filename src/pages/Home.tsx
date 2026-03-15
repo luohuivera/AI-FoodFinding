@@ -232,42 +232,45 @@ export function Home() {
 
       {/* Quick Access Icons */}
       <div className="max-w-[1200px] mx-auto px-4 pt-6 pb-2">
-        <div className="flex items-center justify-between overflow-x-auto custom-scrollbar">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           <div 
-            className="flex flex-col items-center gap-2 cursor-pointer group shrink-0"
+            className="flex items-center gap-3 cursor-pointer group bg-white rounded-2xl p-2.5 shadow-[0_2px_8px_rgb(0,0,0,0.04)] border border-slate-100 hover:shadow-md transition-shadow"
             onClick={() => setActiveCategory("美食排行")}
           >
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-400 to-orange-500 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
-              <TrendingUp className="w-7 h-7" />
+            <div className="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-orange-400 to-orange-500 flex items-center justify-center text-white group-hover:scale-105 transition-transform">
+              <TrendingUp className="w-5 h-5" />
             </div>
-            <span className="text-sm font-medium text-text-main">美食排行</span>
+            <span className="text-[14px] font-bold text-slate-700 whitespace-nowrap">美食排行</span>
           </div>
+          
           <div 
-            className="flex flex-col items-center gap-2 cursor-pointer group shrink-0"
+            className="flex items-center gap-3 cursor-pointer group bg-white rounded-2xl p-2.5 shadow-[0_2px_8px_rgb(0,0,0,0.04)] border border-slate-100 hover:shadow-md transition-shadow"
             onClick={() => setActiveCategory("必吃榜")}
           >
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
-              <Award className="w-7 h-7" />
+            <div className="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-white group-hover:scale-105 transition-transform">
+              <Award className="w-5 h-5" />
             </div>
-            <span className="text-sm font-medium text-text-main">必吃榜</span>
+            <span className="text-[14px] font-bold text-slate-700 whitespace-nowrap">必吃榜</span>
           </div>
+
           <div 
-            className="flex flex-col items-center gap-2 cursor-pointer group shrink-0"
+            className="flex items-center gap-3 cursor-pointer group bg-white rounded-2xl p-2.5 shadow-[0_2px_8px_rgb(0,0,0,0.04)] border border-slate-100 hover:shadow-md transition-shadow"
             onClick={() => setActiveCategory("食堂测评")}
           >
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-red-400 to-rose-500 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
-              <Store className="w-7 h-7" />
+            <div className="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-red-400 to-rose-500 flex items-center justify-center text-white group-hover:scale-105 transition-transform">
+              <Store className="w-5 h-5" />
             </div>
-            <span className="text-sm font-medium text-text-main">食堂测评</span>
+            <span className="text-[14px] font-bold text-slate-700 whitespace-nowrap">食堂测评</span>
           </div>
+
           <div 
-            className="flex flex-col items-center gap-2 cursor-pointer group shrink-0"
+            className="flex items-center gap-3 cursor-pointer group bg-white rounded-2xl p-2.5 shadow-[0_2px_8px_rgb(0,0,0,0.04)] border border-slate-100 hover:shadow-md transition-shadow"
             onClick={() => setActiveCategory("大学城夜市")}
           >
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-400 to-purple-500 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
-              <Moon className="w-7 h-7" />
+            <div className="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-indigo-400 to-purple-500 flex items-center justify-center text-white group-hover:scale-105 transition-transform">
+              <Moon className="w-5 h-5" />
             </div>
-            <span className="text-sm font-medium text-text-main">大学城夜市</span>
+            <span className="text-[14px] font-bold text-slate-700 whitespace-nowrap">大学城夜市</span>
           </div>
         </div>
       </div>
